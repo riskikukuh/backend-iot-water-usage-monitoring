@@ -1,0 +1,48 @@
+{
+   "name": "iot-water-usage-monitoring",
+   "version": "1.0.0",
+   "description": "Backend for IoT Water Usage Monitoring",
+   "main": "src/index.ts",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "ts-node src/index.ts",
+      "debug": "nodemon --exec ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs",
+      "water-usage:debug": "ts-node src/test-water-usage-scheduller.ts",
+      "histories-service": "ts-node src/history-service.ts",
+      "bill-service": "ts-node src/bill-service.ts",
+      "bill:debug": "ts-node src/test-bill-scheduller.ts",
+      "manual-notification": "ts-node src/manual-notification.ts",
+      "add-bill": "ts-node src/manual-add-bill.ts",
+      "add-water-usage": "ts-node src/manual-add-water-usage.ts",
+      "add-history": "ts-node src/manual-add-history.ts",
+      "migration:create": "ts-node ./node_modules/.bin/typeorm migration:create",
+      "migration:up": "ts-node ./node_modules/.bin/typeorm migration:run -d src/data-source.ts",
+      "migration:down": "ts-node ./node_modules/.bin/typeorm migration:revert -d src/data-source.ts",
+      "migration:generate": "ts-node ./node_modules/.bin/typeorm migration:generate ./src/migration/generated -d src/data-source.ts"
+   },
+   "keywords": ["IoT", "Water Usage Monitoring", "IoT Water Usage Monitoring"],
+   "author": "Riski Kukuh",
+   "license": "ISC",
+   "dependencies": {
+      "@types/express": "^4.17.16",
+      "axios": "^1.4.0",
+      "class-validator": "^0.14.0",
+      "express": "^4.18.2",
+      "express-jwt": "^8.4.1",
+      "firebase-admin": "^11.5.0",
+      "jsonwebtoken": "^9.0.0",
+      "mysql": "^2.18.1",
+      "node-schedule": "^2.1.1",
+      "nodemon": "^2.0.20",
+      "npm": "^9.4.0",
+      "reflect-metadata": "^0.1.13",
+      "socket.io": "^4.5.4",
+      "typeorm": "0.3.11"
+   },
+   "devDependencies": {
+      "@types/node": "^16.18.11",
+      "ts-node": "^10.7.0",
+      "typescript": "^4.5.2"
+   }
+}

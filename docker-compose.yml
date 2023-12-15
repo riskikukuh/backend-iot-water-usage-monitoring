@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  web:
+    container_name: web
+    ports:
+      - "8008:8008"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      TZ: "Asia/Jakarta"
+    networks:
+      iot:
+    command: sh -c "npm run migration:up && npm run start"
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: mysql:5.7.42
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+    networks:
+      iot:
+
+networks:
+  iot:
