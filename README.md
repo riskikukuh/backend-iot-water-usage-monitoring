@@ -43,8 +43,6 @@ Aplikasi backend untuk memproses data monitoring dari IoT dan yang digunakan pad
    pm2 start --name "bill-service" npm -- run bill-service # Automatic Bill System
    ```
 
-   
-
 
 
 ## Roadmap
@@ -60,4 +58,4 @@ Aplikasi backend untuk memproses data monitoring dari IoT dan yang digunakan pad
 
 Riski Kukuh Wiranata - [@riskikukuh_](https://twitter.com/riskikukuh_) - <a href="mailto:riskikukuh.me@gmail.com">riskikukuh.me@gmail.com</a>
 
-Project Link: [https://github.com/riskikukuh/backend-iot-water-usage-monitoring](https://github.com/riskikukuh/backend-iot-water-usage-monitoring
+Project Link: [https://github.com/riskikukuh/backend-iot-water-usage-monitoring](https://github.com/riskikukuh/backend-iot-water-usage-monitoring)
